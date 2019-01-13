@@ -74,4 +74,11 @@ Route::get('response','Day3\Day3Controller@response');
     return 'hello world';
 });*/
 
+//注册用户
+Route::get('user/register','Day4\UserController@create');
+Route::get('user/index','Day4\UserController@index')->name('user.index');
+//用户登录
+Route::get('login','Day4\SessionController@create')->name('login');
+Route::post('login','Day4\SessionController@store')->name('login');
+
 
